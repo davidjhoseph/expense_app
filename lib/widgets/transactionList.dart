@@ -8,14 +8,15 @@ class TransactionList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
+      height: MediaQuery.of(context).size.height * 0.6,
       margin: EdgeInsets.only(top: 10),
       child: transactions.isEmpty
           ? Column(
               children: [
                 Text('No Transactions yet'),
-                Image.asset(
-                    'assets/images/pineapple-supply-co-rh0kqyU7sWc-unsplash.jpg'),
+                // Image.asset(
+                //   'assets/images/pineapple-supply-co-rh0kqyU7sWc-unsplash.jpg',
+                // ),
               ],
             )
           : ListView.builder(
